@@ -1,6 +1,6 @@
 # SmartContract.Essentials
 
-[![Build Status](https://dev.azure.com/developmomentum/Develop%20Momentum/_apis/build/status/drmathias.SmartContract.Essentials?branchName=master)](https://dev.azure.com/developmomentum/Develop%20Momentum/_build/latest?definitionId=10&branchName=master) ![Nuget](https://img.shields.io/nuget/v/SmartContract.Essentials)
+[![Build Status](https://dev.azure.com/developmomentum/Develop%20Momentum/_apis/build/status/drmathias.SmartContract.Essentials?branchName=master)](https://dev.azure.com/developmomentum/Develop%20Momentum/_build/latest?definitionId=10&branchName=master) [![Nuget](https://img.shields.io/nuget/v/SmartContract.Essentials)](https://www.nuget.org/packages/SmartContract.Essentials/)
 
 ## Overview
 
