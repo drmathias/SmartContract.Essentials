@@ -9,6 +9,9 @@
     <Authors>Adam Shirt</Authors>
     <Description>Blockchain-agnostic tools for developing smart contract based applications</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/drmathias/SmartContract.Essentials</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>blockchain encryption smart-contracts stratis neo</PackageTags>
   </PropertyGroup>
 
 </Project>

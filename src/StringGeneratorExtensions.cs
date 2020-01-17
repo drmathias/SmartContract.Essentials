@@ -9,8 +9,8 @@
         /// Generates a password that is optimised for AES encryption
         /// </summary>
         /// <param name="stringGenerator"></param>
-        /// <returns></returns>
-        public static string GeneratePassword(this IStringGenerator stringGenerator)
+        /// <returns>A random 15 character password</returns>
+        public static string CreatePassword(this IStringGenerator stringGenerator)
         {
             return stringGenerator.CreateUniqueString(15);
         }
