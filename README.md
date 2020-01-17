@@ -1,5 +1,7 @@
 # SmartContract.Essentials
 
+[![Build Status](https://dev.azure.com/developmomentum/Develop%20Momentum/_apis/build/status/drmathias.SmartContract.Essentials?branchName=master)](https://dev.azure.com/developmomentum/Develop%20Momentum/_build/latest?definitionId=10&branchName=master) ![Nuget](https://img.shields.io/nuget/v/SmartContract.Essentials)
+
 ## Overview
 
 This is a set of tools that can be used to simplify the development of smart contract applications. Currently the tools included can be used for data encryption and string generation.
