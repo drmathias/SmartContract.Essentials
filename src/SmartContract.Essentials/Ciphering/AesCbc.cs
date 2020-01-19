@@ -2,12 +2,12 @@
 using System.IO;
 using System.Security.Cryptography;
 
-namespace SmartContract.Essentials
+namespace SmartContract.Essentials.Ciphering
 {
     /// <summary>
-    /// A secure implementation of AES that produces minimal length output
+    /// A implementation of AES that produces minimal length output, while still being secure
     /// </summary>
-    public class AesCbc : IDisposable
+    public class AesCbc : ICbc
     {
         private readonly Aes _provider;
 
@@ -22,7 +22,7 @@ namespace SmartContract.Essentials
         }
 
         /// <summary>
-        /// Encrypts data using CBC to a cipher
+        /// Encrypts data using a CBC algorithm
         /// </summary>
         /// <param name="plainText">Plaintext string to encrypt</param>
         /// <exception cref="ArgumentNullException"></exception>
@@ -50,9 +50,9 @@ namespace SmartContract.Essentials
         }
 
         /// <summary>
-        /// Decrypts a cipher using CBC
+        /// Decrypts data using a CBC algorithm
         /// </summary>
-        /// <param name="cipher">Generated cipher to decrypt</param>
+        /// <param name="cipher">Cipher to decrypt</param>
         /// <param name="key">The secret encryption key</param>
         /// <param name="iv">The initialization vector</param>
         /// <exception cref="ArgumentNullException"></exception>

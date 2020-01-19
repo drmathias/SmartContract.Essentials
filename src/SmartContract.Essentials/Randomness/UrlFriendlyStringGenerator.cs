@@ -1,7 +1,7 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
 
-namespace SmartContract.Essentials
+namespace SmartContract.Essentials.Randomness
 {
     /// <summary>
     /// Generates URL friendly strings
@@ -26,7 +26,7 @@ namespace SmartContract.Essentials
             StringBuilder result = new StringBuilder(length);
             foreach (byte b in data)
             {
-                result.Append(_urlFriendlyCharacters[b % (_urlFriendlyCharacters.Length)]);
+                result.Append(_urlFriendlyCharacters[b % _urlFriendlyCharacters.Length]);
             }
 
             return result.ToString();

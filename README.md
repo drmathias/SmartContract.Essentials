@@ -8,11 +8,12 @@ This is a set of tools that can be used to simplify the development of smart con
 
 ## Usage
 
-### Generating a random string
+### Setting up DI
+
+Encryption providers can be created through a factory, allowing you to adhere to SOLID guidelines and test your implementation more easily. Begin by adding the factory to your container.
 
 ```csharp
-var generator = new UrlFriendlyStringGenerator();
-var value = generator.CreateUniqueString(24);
+services.AddSingleton<ICipherFactory, AesCipherFactory>();
 ```
 
 ### Encrypting personal data
@@ -21,9 +22,16 @@ var value = generator.CreateUniqueString(24);
 var customerName = "Benjamin Swift";
 
 CbcResult customerNameEncryptionResult;
-using (var aes = new AesCbc())
+try
 {
-    customerNameEncryptionResult = aes.Encrypt(customerName);
+    using var cbc = _cipherFactory.CreateCbcProvider();
+    customerNameEncryptionResult = cbc.Encrypt(customerName);
+}
+catch (CryptographicException e)
+{
+}
+catch (ArgumentException e)
+{
 }
 
 // persist cipher to contract
@@ -33,21 +41,23 @@ using (var aes = new AesCbc())
 ### Decrypting personal data
 
 ```csharp
-using (var aes = new AesCbc())
+string customerName;
+try
 {
-    var customerName = aes.Decrypt(customerNameCipher, key, iv);
+    using var cbc = _cipherFactory.CreateCbcProvider();
+    customerName = cbc.Decrypt(customerNameCipher, key, iv);
+}
+catch (CryptographicException e)
+{
+}
+catch (ArgumentException e)
+{
 }
 ```
 
-### Password generation
+### Generating a random string
 
 ```csharp
 var generator = new UrlFriendlyStringGenerator();
-var password = generator.CreatePassword();
-
-CbcResult passwordEncryptionResult;
-using (var aes = new AesCbc())
-{
-    passwordEncryptionResult = aes.Encrypt(password);
-}
+var value = generator.CreateUniqueString(24);
 ```

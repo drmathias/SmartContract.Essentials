@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\SmartContract.Essentials.csproj" />
+    <ProjectReference Include="..\..\src\SmartContract.Essentials\SmartContract.Essentials.csproj" />
   </ItemGroup>
 
 </Project>

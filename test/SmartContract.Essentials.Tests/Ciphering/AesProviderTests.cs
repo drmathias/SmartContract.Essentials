@@ -1,7 +1,8 @@
 ﻿using NUnit.Framework;
+using SmartContract.Essentials.Ciphering;
 using System;
 
-namespace SmartContract.Essentials.Tests
+namespace SmartContract.Essentials.Tests.Ciphering
 {
     public class AesProviderTests
     {

@@ -1,4 +1,4 @@
-﻿namespace SmartContract.Essentials
+﻿namespace SmartContract.Essentials.Randomness
 {
     /// <summary>
     /// A generator of strings

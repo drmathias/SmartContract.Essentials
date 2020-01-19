@@ -1,4 +1,4 @@
-﻿namespace SmartContract.Essentials
+﻿namespace SmartContract.Essentials.Ciphering
 {
     /// <summary>
     /// Cipher result containing all the values that are needed for deciphering

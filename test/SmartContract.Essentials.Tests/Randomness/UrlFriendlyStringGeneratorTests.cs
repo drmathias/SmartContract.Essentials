@@ -1,8 +1,9 @@
 ﻿using NUnit.Framework;
+using SmartContract.Essentials.Randomness;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace SmartContract.Essentials.Tests
+namespace SmartContract.Essentials.Tests.Randomness
 {
     public class UrlFriendlyStringGeneratorTests
     {
