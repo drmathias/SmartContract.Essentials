@@ -12,7 +12,11 @@
     <RepositoryUrl>https://github.com/drmathias/SmartContract.Essentials</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>blockchain encryption smart-contracts stratis neo</PackageTags>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SHA3.Net" Version="1.2.2" />
+  </ItemGroup>
 
 </Project>
